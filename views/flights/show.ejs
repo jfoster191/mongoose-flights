@@ -1,0 +1,31 @@
+<%- include('../partials/header') %>
+<h3><%= `Welcome to Flight ${flight.flightNo} to ${flight.airport}` %></h3>
+    <section id="show-page">
+        <div>Airport: </div>
+        <div><%= flight.airport %></div>
+        <div>Airline: </div>
+        <div><%= flight.airline %></div>
+        <div>Flight Number: </div>
+        <div><%= flight.flightNo %></div>
+        <div>Departure Date: </div>
+        <div><%= flight.departs %></div>
+  </section><br>
+
+  <form id="add-destination-form" method="POST"
+  action="/flights/<%= flight._id %>/destination">
+  <label>Destination:</label>
+  <select name="rating">
+    <option value="BOS">BOS</option>
+    <option value="AUS">AUS</option>
+    <option value="DFW">DFW</option>
+    <option value="DEN">DEN</option>
+    <option value="LAX">LAX</option>
+    <option value="SAN">SAN</option>
+  </select><br>
+  <label> Arrival Date:
+    <input type="datetime-local" name="departs">
+</label><br>
+  <input type="submit" value="Add Destination">
+</form>
+
+<%- include('../partials/footer') %>
