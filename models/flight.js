@@ -26,7 +26,7 @@ const flightSchema = new mongoose.Schema({
         min: 10, max: 9999
     },
     departs: Date,
-    destination: [destinationSchema]
+    destinations: [destinationSchema]
 }, {
     timestamps: true
 })
