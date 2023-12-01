@@ -1,10 +1,12 @@
 const Flight = require('../models/flight');
+const Ticket = require('../models/ticket');
 
 module.exports = {
     new: newFlight,
     create,
     index,
-    show
+    show,
+    delete: deleteFlight
 }
 
 async function newFlight(req, res){
@@ -34,5 +36,11 @@ async function index(req, res){
 
 async function show(req, res){
     const flight = await Flight.findById(req.params.id);
-    res.render('flights/show', {title: `Flight Details`, flight})
+    const tickets = await Ticket.find().where({flight: flight})
+    res.render('flights/show', {title: `Flight Details`, flight, tickets})
+}
+
+async function deleteFlight(req, res){
+    await Flight.deleteOne(Flight.findById(req.params.id));
+    res.redirect('/flights');
 }

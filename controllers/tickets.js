@@ -7,8 +7,8 @@ module.exports = {
 }
 
 async function newTicket (req, res){
-    const tickets = await Ticket.find({}).sort('price');
     const flight = await Flight.findById(req.params.flightId)
+    const tickets = await Ticket.find({}).where({flight: flight}).sort('price');
     res.render('tickets/new', {title: 'Add New Ticket', tickets, flight});
 }
 

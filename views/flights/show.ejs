@@ -49,8 +49,20 @@
   <% } else { %>
     <h5>No Destination Yet</h5>
   <% } %>
+  <br>
+  <h4>TICKETS</h4>
+  <section id="ticket-container">
+    <% tickets.forEach(function(t) { %>
+      <article class="ticket">Seat: <%= t.seat %> Price: $<%= t.price %></article>
+    <% }) %>
+  </section>
 
   <br>
   <a href="/flights/<%= flight._id %>/tickets/new">Add New Ticket</a>
+  <br><br>
 
+  <form id="delete-flight" method="POST"
+  action="/flights/<%= flight._id %>?_method=DELETE">
+  <button type="submit">Delete</button>
+  </form>
 <%- include('../partials/footer') %>
