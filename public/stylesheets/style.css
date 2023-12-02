@@ -49,30 +49,42 @@ header>a:hover{
   border-right: 0.5vmin solid white;
 }
 
-thead{
-  display: flex;
-  flex-direction: column;
-  width: 90vw;
-  text-align: left;
-  border: 0.2vmin solid black;
+
+table {
+  table-layout: auto;
+  width: 75%;
+  border-collapse: collapse;
+  border: 0.75vmin solid black;
 }
 
-tbody{
-  display: flex;
-  flex-direction: column;
-  width: 90vw;
+thead>*{
+  border-bottom: 0.75vmin solid black;
+  font-weight: bolder;
+  font-size: 3vmin;
 }
 
-tr{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+thead th:nth-child(1) {
+  width: 10%;
 }
 
-tr>*{
-  flex: 1 1 6%;
-  border: 0.2vmin solid black;
+thead th:nth-child(2) {
+  width: 20%;
 }
+
+thead th:nth-child(3) {
+  width: 10%;
+}
+
+thead th:nth-child(4) {
+  width: 40%;
+}
+
+th, td{
+  padding: 2vmin;
+  border: 0.25vmin solid black;
+  text-align: center;
+}
+
 
 #show-page{
   display: flex;
@@ -102,4 +114,28 @@ tr>*{
   border: 0.2vmin solid #767676;
   padding: 1vmin 2vmin 1vmin 2vmin;
   border-radius: 0.5vmin;
+}
+
+#delete-flight>button{
+  width: 19.5vmin;
+  font-size: 2.25vmin;
+  height: 5.1vmin;
+}
+
+#buttons{
+  display: flex;
+  gap: 2vmin;
+  margin-left: -5vmin;
+  justify-content: center;
+}
+
+#new-flight{
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  font-size: 3vmin;
+}
+
+#new-flight>button{
+  font-size: 3vmin;
 }

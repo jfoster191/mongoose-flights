@@ -51,6 +51,7 @@
   <% } %>
   <br>
   <h4>TICKETS</h4>
+  <div id="buttons">
   <section id="ticket-container">
     <% tickets.forEach(function(t) { %>
       <article class="ticket">Seat: <%= t.seat %> Price: $<%= t.price %></article>
@@ -65,4 +66,5 @@
   action="/flights/<%= flight._id %>?_method=DELETE">
   <button type="submit">Delete</button>
   </form>
+  </div>
 <%- include('../partials/footer') %>
