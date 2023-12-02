@@ -14,7 +14,11 @@
             <td><%= f.airport %></td>
             <td><%= f.airline %></td>
             <td><%= f.flightNo %></td>
+            <% if (f.departs < Date.now()){ %>
+            <td style="color: red;"><%= f.departs %></td>
+            <% }else{ %>
             <td><%= f.departs %></td>
+            <% } %>
             <td><a href="/flights/<%= f._id %>">DETAILS</a></td>
             </tr>
             <% }); %>
