@@ -1,8 +1,105 @@
 body {
-  padding: 50px;
+  display: flex;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f2e8cf;
+  width: 100%vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 7vmin;
+}
+
+h3{
+  font-size: 4vmin;
+  color: #386641;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #bc4749;
+  font-size: 3vmin;
+  color: white;
+  gap: 3vmin;
+  padding-top: 1vmin;
+  padding-bottom: 2.5vmin;
+  margin-top: -1.25vmin;
+  width: 100vw;
+}
+
+header>a {
+  color: white;
+  padding-right: 2.5vmin;
+}
+
+header>a:hover{
+  color: #386641;
+}
+
+.head {
+  border-right: 0.5vmin solid white;
+}
+
+thead{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  text-align: left;
+  border: 0.2vmin solid black;
+}
+
+tbody{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+}
+
+tr{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+tr>*{
+  flex: 1 1 6%;
+  border: 0.2vmin solid black;
+}
+
+#show-page{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 40vw;
+}
+
+#show-page>div:nth-child(even){
+  background-color: #a7c957;
+}
+
+#show-page>div:nth-child(odd){
+  background-color: #6a994e;
+  font-weight: bold;
+}
+
+#show-page>div{
+  flex: 1 1 50%;
+  border: 0.25vmin solid black;
+  font-size: 2.5vmin;
+}
+
+#new-ticket{
+  color: black;
+  background-color: #EFEFEF;
+  border: 0.2vmin solid #767676;
+  padding: 1vmin 2vmin 1vmin 2vmin;
+  border-radius: 0.5vmin;
 }
